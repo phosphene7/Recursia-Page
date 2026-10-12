@@ -8,7 +8,11 @@ This public repository contains the project website, illustrations, and the down
 
 ## Updating videos
 
-Upload `task-1.mp4`, `task-2.mp4`, and `task-3.mp4` to the repository root, then set the matching `src` values in `site-config.js`. HTTPS video URLs also work. Empty sources keep the illustrated placeholders. Optional WebVTT captions can be supplied with `captions`.
+Replace `T1.mp4`–`T3.mp4` for the three target demonstrations and `S1.mp4`–`S6.mp4` for the six source demonstrations. Matching JPG files are video posters. Paths are configured in `site-config.js`; HTTPS video URLs and optional WebVTT `captions` are also supported. Source players preload no video data until requested.
+
+The supplied clips are selected successful recordings at original speed. Motion segments are concatenated in order; unrecorded perception/model-wait intervals are excluded, so video durations are not full trial elapsed times. These illustrative clips do not change the success-rate table.
+
+Implementation code: https://github.com/cyzhuoda/recursia-fr3
 
 ## Updating the paper
 
@@ -20,7 +24,7 @@ GitHub Pages is configured to deploy from `main` / `(root)`. Commits to main upd
 
 ## Content
 
-Method figure and task descriptions are based on the supplied manuscript. Three task cover illustrations are schematic. Physical results are preliminary, with three trials per target task and method. Google Fonts have system font fallbacks.
+Method figure and task descriptions are based on the supplied manuscript. Video posters are frames from the supplied physical demonstrations. Physical results are preliminary, with three trials per target task and method. Google Fonts have system font fallbacks.
 
 Page structure was inspired by https://ganlin-yang.github.io/EventVLA.github.io/ . Laboratory link: https://github.com/cocacola-lab .
 
@@ -32,7 +36,8 @@ Page structure was inspired by https://ganlin-yang.github.io/EventVLA.github.io/
 - `styles.css`：颜色、字体、间距和手机布局。
 - `site-config.js`：作者、论文代码仓库链接、三个任务视频的地址及封面。
 - `Recursia.pdf`：可查看和下载的论文；更新时用同名文件替换。
-- `task-1.svg`、`task-2.svg`、`task-3.svg`：当前的演示封面。
+- `T1.mp4`–`T3.mp4`：三个目标任务视频；`S1.mp4`–`S6.mp4`：六个源任务视频。
+- `T1.jpg`–`T3.jpg`、`S1.jpg`–`S6.jpg`：从视频抽取的演示封面。
 
 GitHub Pages 网站随 main 分支提交自动更新。
 

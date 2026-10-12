@@ -19,7 +19,6 @@
   }
   const codeUrl = safeUrl(config.codeUrl);
   if (codeUrl) { const link = document.querySelector('#code-link'); link.href = codeUrl; link.hidden = false; }
-  const populatedTasks = [];
   Object.entries(config.videos || {}).forEach(([id, item]) => {
     const src = safeUrl(item.src);
     const card = document.querySelector(`[data-task="${id}"]`);
@@ -28,7 +27,7 @@
     const video = document.createElement('video');
     video.controls = true;
     video.playsInline = true;
-    video.preload = 'metadata';
+    video.preload = item.preload === 'none' ? 'none' : 'metadata';
     video.src = src;
     video.setAttribute('aria-label', `${card.querySelector('h3').textContent} demonstration video`);
     if (safeUrl(item.poster)) video.poster = item.poster;
@@ -41,9 +40,7 @@
     errorNotice.textContent = 'This video could not be loaded. Please check back later.';
     video.addEventListener('error', () => { errorNotice.hidden = false; });
     slot.replaceChildren(video, errorNotice);
-    populatedTasks.push(id);
   });
-  if (populatedTasks.length === 3) document.querySelector('.demos-note').hidden = true;
   const menu = document.querySelector('.menu-toggle');
   const nav = document.querySelector('#navigation');
   menu.addEventListener('click', () => { const open = menu.getAttribute('aria-expanded') !== 'true'; menu.setAttribute('aria-expanded', String(open)); nav.classList.toggle('is-open', open); });
