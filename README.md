@@ -2,9 +2,7 @@
 
 Public research project page for **Recursive Self-Improvement of Shared Executable Stacks for Zero-Shot Long-Horizon Robot Manipulation**.
 
-Website: https://recursia-robotics.brinyhake6.chatgpt.site
-
-GitHub Pages mirror: https://phosphene7.github.io/Recursia-Page/
+Website: https://phosphene7.github.io/Recursia-Page/
 
 This public repository contains the project website, illustrations, and the downloadable paper. The original `phosphene7/Recursia` repository is public and keeps the earlier website draft as a backup. It contains no robot or experiment implementation. Maintain the live website using this `Recursia-Page` repository. Authors are intentionally left blank; no arXiv link is included.
 
@@ -18,7 +16,7 @@ Replace `Recursia.pdf`. The Paper PDF button opens it; Download PDF saves it.
 
 ## Deployment
 
-The GitHub Pages mirror is configured to deploy from `main` / `(root)`. Commits to main update that mirror automatically. The ordinary-domain main website requires a separate Sites publish after changes are synchronized. No build tools are needed. All asset paths are relative so the website works under a GitHub Pages project path.
+GitHub Pages is configured to deploy from `main` / `(root)`. Commits to main update the website automatically. No build tools are needed. All asset paths are relative so the website works under a GitHub Pages project path.
 
 ## Content
 
@@ -36,6 +34,6 @@ Page structure was inspired by https://ganlin-yang.github.io/EventVLA.github.io/
 - `Recursia.pdf`：可查看和下载的论文；更新时用同名文件替换。
 - `task-1.svg`、`task-2.svg`、`task-3.svg`：当前的演示封面。
 
-GitHub Pages 镜像随 main 分支提交自动更新。普通主站通过 Sites 托管，**不会自动跟随 GitHub 提交更新**；修改合并后，需要同步源码并重新发布普通主站，可以让 Codex 完成这一步。普通主站的编辑权限与 GitHub 仓库编辑权限分开管理。
+GitHub Pages 网站随 main 分支提交自动更新。
 
 官方协作者说明：https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/repository-access-and-collaboration/inviting-collaborators-to-a-personal-repository
